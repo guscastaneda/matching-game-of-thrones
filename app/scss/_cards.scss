@@ -1,0 +1,206 @@
+#card-group {
+    max-width: 85%;
+    margin: 20px 20px 20px 190px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    width: 12%;
+    height: 0;
+    margin-bottom: .5%;
+    padding-bottom: 19%;
+    border: 1px solid #F8F6ED;
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.3);
+    transition: all .125s ease-in;
+    transform-style: preserve-3d;
+    &:hover, &:focus, &:active {
+        transform: scale(1.025);
+        background-color: rgba(255,255,255,.9);
+        box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.6);
+    }
+}
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.card-back {
+    background: url('../patterns/seamless-paper-texture.png') repeat;
+    backface-visibility: hidden;
+}
+.card-front {
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    backface-visibility: hidden;
+    background-color: #FAF8F0;
+    transform: rotateY(180deg);
+    .character-info {
+        background: #F8F6ED;
+        background: rgba(250, 248, 240, .95);
+        background-origin: border;
+        position: absolute;
+        margin-bottom: -2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 20%;
+        transition: all .5s ease;
+    }
+    .character-name, .house-name {
+        font-family: $font-stack;
+    }
+    .character-name {
+        font-size: .90em;
+        font-weight: bolder;
+        padding: 5% 0;
+        text-align: center;
+        color: $dark-color;
+    }
+    .house-name {
+        font-size: .55em;
+        color: $dark-color;
+        letter-spacing: .125em;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+    }
+    .dead:after {
+        content: "\2020";
+        font-size: 1.125em;
+        line-height: 2;
+        font-weight: bolder;
+        font-family: $font-stack;
+        margin:15px 0 0 10px;
+        color: $primary-color;
+    }
+    span[class^="house-"],
+    span.the-dothraki,
+    span.the-nights-watch,
+    span.the-wildlings {
+        background-size: 13px;
+        height: 13px;
+        width: 13px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: right;
+        margin: 10px 10px 0 0;
+    }
+    .house-stark { background: url('../images/house-stark.png'); }
+    .house-lannister { background: url('../images/house-lannister.png'); }
+    .house-baratheon { background: url('../images/house-baratheon-stannis.png'); }
+    .house-baelish { background: url('../images/house-baelish.png'); }
+    .the-wildlings { background: url('../images/the-wildlings.png'); }
+    .the-nights-watch { background: url('../images/the-nights-watch.png'); }
+    .the-dothraki { background: url('../images/the-dothraki.png'); }
+    .house-greyjoy { background: url('../images/house-greyjoy.png'); }
+    .house-targaryen { background: url('../images/house-targaryen.png'); }
+    .house-arryn { background: url('../images/house-arryn.png'); }
+    .house-tully { background: url('../images/house-tully.png'); }
+    .house-martell { background: url('../images/house-martell.png'); }
+    .house-tyrell { background: url('../images/house-tyrell.png'); }
+    .house-bolton { background: url('../images/house-bolton.png'); }
+}
+.flipped, .flipped:hover, .flipped:active, .flipped:focus {
+    transform: rotateY(180deg);
+    transition: transform .1s linear;
+}
+.button {
+    background: $primary-color;
+    &:hover, &:active, &:focus {
+        background: lighten($primary-color, 10%);
+    }
+}
+.kahl-drogo {
+    background: url('../images/drogo.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.eddard-stark {
+    background: url('../images/eddard.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.jaime-lannister {
+    background: url('../images/jaime.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.tyrion-lannister {
+    background: url('../images/tyrion.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.arya-stark{
+    background: url('../images/arya-stark.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.the-hound {
+    background: url('../images/the-hound.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.theon-greyjoy {
+    background: url('../images/theon-greyjoy.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.littlefinger {
+    background: url('../images/petyr-baelish.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.daenerys-targaryen {
+    background: url('../images/daenerys-targaryen.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.jon-snow {
+    background: url('../images/jon-snow.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+
+.ygritte {
+    background: url('../images/ygritte.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}
+.stannis-baratheon {
+    background: url('../images/stannis-baratheon.png') no-repeat,
+                url('../patterns/seamless-paper-texture.png') repeat;
+    background-position: center 0;
+    background-size: auto 115%, 100%;
+    background-origin: bottom;
+}

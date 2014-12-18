@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Games of Thrones</title>
+    <!-- build:css css/libraries.min.css-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+    <!-- bower:css-->
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:css css/app.min.css-->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild-->
+    <!-- build:js js/vendor/modernizr.min.js-->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild-->
+  </head>
+  <body>
+    <head>
+      <div class="logo"></div>
+    </head>
+    <div id="nav" class="nav-wrapper">
+      <nav>
+        <form accept-charset="UTF-8" autocomplete="off" novalidate>
+          <ul>
+            <li id="spoilers"><i class="fa fa-exclamation"></i>
+              <fieldset>
+                <legend>Spoilers</legend>
+                <input type="radio" id="spoilers-on" name="spoilers" checked>
+                <label for="spoilers-on">On</label>
+                <input type="radio" id="spoilers-off" name="spoilers">
+                <label for="spoilers-off">Off</label>
+              </fieldset>
+            </li>
+            <li id="background"><i class="fa fa-paint-brush"></i>
+              <fieldset>
+                <legend>Background</legend>
+                <input type="radio" id="dark-background" name="background" value="dark-background">
+                <label for="dark-background">Dark</label>
+                <input type="radio" id="light-background" name="background" value="light-background" checked>
+                <label for="light-background">Light</label>
+              </fieldset>
+            </li>
+            <li id="display-name"><i class="fa fa-male"></i>
+              <fieldset>
+                <legend>Display Name</legend>
+                <input type="radio" id="display-name-on" name="display-name" checked>
+                <label for="display-name-on">On</label>
+                <input type="radio" id="display-name-off" name="display-name">
+                <label for="display-name-off">Off</label>
+              </fieldset>
+            </li>
+            <li><i class="fa fa-refresh"></i>
+              <fieldset><a href="#" id="reset" class="button small radius">New Game</a></fieldset>
+            </li>
+            <li><i id="menu-button" class="fa fa-chevron-right"></i></li>
+          </ul>
+        </form>
+      </nav>
+    </div>
+    <div id="card-group">
+      <div id="game-over" data-reveal class="reveal-modal"><a class="close-reveal-modal">&#215;</a><img src="../images/joffrey-clapping-game-of-thrones.gif" alt="Joeffrey Clapping" class="th radius">
+        <h3>You've matched all cards in <strong><span id="number-of-moves"></span></strong> moves.</h3>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front kahl-drogo">
+          <div class="character-info">
+            <h2 class="character-name">Kahl Drogo</h2>
+            <h3 class="house-name">The Dothraki</h3>
+          </div><span class="the-dothraki"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front kahl-drogo">
+          <div class="character-info">
+            <h2 class="character-name">Kahl Drogo</h2>
+            <h3 class="house-name">The Dothraki</h3>
+          </div><span class="the-dothraki"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front eddard-stark">
+          <div class="character-info">
+            <h2 class="character-name">Eddard Stark</h2>
+            <h3 class="house-name">House Stark</h3>
+          </div><span class="house-stark"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front eddard-stark">
+          <div class="character-info">
+            <h2 class="character-name">Eddard Stark</h2>
+            <h3 class="house-name">House Stark</h3>
+          </div><span class="house-stark"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front jaime-lannister">
+          <div class="character-info">
+            <h2 class="character-name">Jaime Lannister</h2>
+            <h3 class="house-name">House Lannister</h3>
+          </div><span class="house-lannister"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front jaime-lannister">
+          <div class="character-info">
+            <h2 class="character-name">Jaime Lannister</h2>
+            <h3 class="house-name">House Lannister</h3>
+          </div><span class="house-lannister"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front tyrion-lannister">
+          <div class="character-info">
+            <h2 class="character-name">Tyrion Lannister</h2>
+            <h3 class="house-name">House Lannister</h3>
+          </div><span class="house-lannister"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front tyrion-lannister">
+          <div class="character-info">
+            <h2 class="character-name">Tyrion Lannister</h2>
+            <h3 class="house-name">House Lannister</h3>
+          </div><span class="house-lannister"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front arya-stark">
+          <div class="character-info">
+            <h2 class="character-name">Arya Stark</h2>
+            <h3 class="house-name">House Stark</h3>
+          </div><span class="house-stark"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front arya-stark">
+          <div class="character-info">
+            <h2 class="character-name">Arya Stark</h2>
+            <h3 class="house-name">House Stark</h3>
+          </div><span class="house-stark"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front the-hound">
+          <div class="character-info">
+            <h2 class="character-name">"The Hound"</h2>
+            <h3 class="house-name">House Lannister</h3>
+          </div><span class="house-lannister"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front the-hound">
+          <div class="character-info">
+            <h2 class="character-name">"The Hound"</h2>
+            <h3 class="house-name">House Lannister</h3>
+          </div><span class="house-lannister"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front littlefinger">
+          <div class="character-info">
+            <h2 class="character-name">"Littlefinger"</h2>
+            <h3 class="house-name">House Baelish</h3>
+          </div><span class="house-baelish"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front littlefinger">
+          <div class="character-info">
+            <h2 class="character-name">"Littlefinger"</h2>
+            <h3 class="house-name">House Baelish</h3>
+          </div><span class="house-baelish"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front daenerys-targaryen">
+          <div class="character-info">
+            <h2 class="character-name">Daenerys Targaryen</h2>
+            <h3 class="house-name">House Targaryen</h3>
+          </div><span class="house-targaryen"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front daenerys-targaryen">
+          <div class="character-info">
+            <h2 class="character-name">Daenerys Targaryen</h2>
+            <h3 class="house-name">House Targaryen</h3>
+          </div><span class="house-targaryen"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front theon-greyjoy">
+          <div class="character-info">
+            <h2 class="character-name">Theon Greyjoy</h2>
+            <h3 class="house-name">House Greyjoy</h3>
+          </div><span class="house-greyjoy"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front theon-greyjoy">
+          <div class="character-info">
+            <h2 class="character-name">Theon Greyjoy</h2>
+            <h3 class="house-name">House Greyjoy</h3>
+          </div><span class="house-greyjoy"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front jon-snow">
+          <div class="character-info">
+            <h2 class="character-name">Jon Snow &amp; Ghost</h2>
+            <h3 class="house-name">The Night's Watch</h3>
+          </div><span class="the-nights-watch"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front jon-snow">
+          <div class="character-info">
+            <h2 class="character-name">Jon Snow &amp; Ghost</h2>
+            <h3 class="house-name">The Night's Watch</h3>
+          </div><span class="the-nights-watch"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front stannis-baratheon">
+          <div class="character-info">
+            <h2 class="character-name">Stannis Baratheon</h2>
+            <h3 class="house-name">House Baratheon</h3>
+          </div><span class="house-baratheon"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front stannis-baratheon">
+          <div class="character-info">
+            <h2 class="character-name">Stannis Baratheon</h2>
+            <h3 class="house-name">House Baratheon</h3>
+          </div><span class="house-baratheon"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front ygritte">
+          <div class="character-info">
+            <h2 class="character-name">Ygritte</h2>
+            <h3 class="house-name">The Wildlings</h3>
+          </div><span class="the-wildlings"></span><span class="dead"></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back"></div>
+        <div class="card-front ygritte">
+          <div class="character-info">
+            <h2 class="character-name">Ygritte</h2>
+            <h3 class="house-name">The Wildlings</h3>
+          </div><span class="the-wildlings"></span><span class="dead"></span>
+        </div>
+      </div>
+    </div>
+    <!-- build:js js/vendor/libraries.min.js-->
+    <!-- bower:js-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:js js/vendor/foundation.min.js-->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/app.min.js-->
+    <script src="js/characters.js"></script>
+    <script src="js/app.js"></script>
+    <!-- endbuild-->
+  </body>
+</html>

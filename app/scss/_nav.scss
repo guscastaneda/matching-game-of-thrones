@@ -1,0 +1,124 @@
+nav {
+    margin-top: 180px;
+}
+.nav-wrapper {
+    background-color: #26292C;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    transition: all .125s ease-in-out;
+
+    fieldset, .blurb {
+        visibility: hidden;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: opacity .125s ease-in-out;
+        transition-delay: -.125s;
+    }
+    form {
+        margin: 0 auto;
+        text-align: center;
+    }
+    ul {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        li {
+            font-family: $font-stack;
+            font-size: .6em;
+            letter-spacing: .3em;
+            font-weight: lighter;
+            text-transform: uppercase;
+            list-style: none;
+            border-bottom: 1px solid #3E4347;
+            color: #bbb;
+            cursor: pointer;
+            padding: 30px 10px;
+            height: 80px;
+            vertical-align: middle;
+            &:last-child {
+                margin-top: 100px;
+            }
+            &:first-child {
+                border-top: 1px solid #3E4347;
+            }
+            &:hover, &:active, &:focus {
+                color: $primary-color;
+                background-color: #212426;
+                i {
+                    color: $primary-color;
+                    transform: scale(1.5);
+                }
+            }
+            legend {
+                padding: 0;
+                margin-bottom: 10px;
+                background: none;
+                color: white;
+            }
+            label {
+                color: #aaa;
+                margin: 0 10px;
+            }
+            input[type="radio"] {
+                display: none;
+            }
+            input[type="radio"]:checked + label {
+                color: $primary-color;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    .fa {
+        font-size: 1.25rem;
+        display: block;
+        opacity: 1;
+        color: white;
+        transition: all .25s ease-in-out;
+        .fa-male {
+            font-size: 1.7rem
+        }
+    }
+}
+.nav-expanded {
+    width: 20%;
+    min-width: 260px;
+    transition: all .125s ease-in-out;
+
+    ul li {
+        padding: 18px 10px;
+        &:last-child {
+            padding: 30px 10px; // Close buttom icon
+        }
+    }
+    fieldset, .blurb {
+        visibility: visible;
+        opacity: 1;
+        transition: all .125s ease-in-out;
+        transition-delay: .25s;
+    }
+    .fa {
+        display: none;
+        opacity: 0;
+        transition: all .125s ease-in-out;
+    }
+    .fa.fa-chevron-right {
+        display: inherit;
+        opacity: 1;
+        transform: rotate(180deg);
+        transition-delay: .2s;
+        padding-top: 10px;
+    }
+    .blurb {
+        color: #666;
+        font: $font-stack;
+        font-size: .75em;
+        display: block;
+    }
+}

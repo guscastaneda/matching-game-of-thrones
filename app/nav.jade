@@ -1,0 +1,78 @@
+div#nav.nav-wrapper
+    nav
+        form(accept-charset="UTF-8", autocomplete="off", novalidate)
+            ul
+                //- li#difficulty
+                //-     i.fa.fa-tachometer
+                //-     fieldset
+                //-         legend Difficulty
+                //-         input(type="radio", id="normal", name="difficulty")
+                //-         label(for="normal") Normal
+                //-         input(type="radio", id="hard", name="difficulty", checked)
+                //-         label(for="hard") Hard
+
+                li#spoilers
+                    i.fa.fa-exclamation
+                    fieldset
+                        legend Spoilers
+                        input(type="radio", id="spoilers-on", name="spoilers", checked)
+                        label(for="spoilers-on") On
+                        input(type="radio", id="spoilers-off", name="spoilers")
+                        label(for="spoilers-off") Off
+
+                li#background
+                    i.fa.fa-paint-brush
+                    fieldset
+                        legend Background
+                        input(type="radio", id="dark-background", name="background", value="dark-background")
+                        label(for="dark-background") Dark
+                        input(type="radio", id="light-background", name="background", value="light-background", checked)
+                        label(for="light-background") Light
+
+                //- li#card-design
+                //-     fieldset
+                //-         legend Card Design
+                //-         input(type="radio", id="dark-card" name="card-design")
+                //-         label(for="dark-card") Dark
+                //-         input(type="radio", id="light-card" name="card-design")
+                //-         label(for="light-card") Light
+                //-    span.icon-card-design
+
+                li#display-name
+                    i.fa.fa-male
+                    fieldset
+                        legend Display Name
+                        input(type="radio", id="display-name-on", name="display-name", checked)
+                        label(for="display-name-on") On
+                        input(type="radio", id="display-name-off", name="display-name")
+                        label(for="display-name-off") Off
+
+
+                //- li#score
+                //- i.fa.fa-dashboard
+                //-     fieldset
+                //-         legend Show Score
+                //-         input(type="radio", id="score-on", name="score", checked)
+                //-         label(for="score-on") On
+                //-         input(type="radio", id="score-off", name="score")
+                //-         label(for="score-off") Off
+                //-     span.icon-score
+
+                //- li#time
+                //- i.fa.fa-dashboard
+                //-     fieldset
+                //-         legend Show Time
+                //-         input(type="radio", id="display-time-on", name="time", checked)
+                //-         label(for="display-time-on") On
+                //-         input(type="radio", id="display-time-off", name="time")
+                //-         label(for="display-time-off") Off
+                //-     span.icon-time
+
+                li
+                    i.fa.fa-refresh
+                    fieldset
+                        a(href="#", class="button small radius", id="reset") New Game
+
+                li
+                    i#menu-button.fa.fa-chevron-right
+
