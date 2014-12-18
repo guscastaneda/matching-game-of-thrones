@@ -87,14 +87,14 @@ nav {
     }
 }
 .nav-expanded {
-    width: 20%;
+    width: 20%; // 20% of window width
     min-width: 260px;
     transition: all .125s ease-in-out;
 
     ul li {
         padding: 18px 10px;
-        &:last-child {
-            padding: 30px 10px; // Close buttom icon
+        &:last-child { // Close buttom icon
+            padding: 30px 10px;
         }
     }
     fieldset, .blurb {
