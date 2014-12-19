@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 body {
-    background-image: url('../patterns/debut-light.png');
+    background-image: url('../images/patterns/debut-light.png');
     transition: background-image .5s ease;
 }
 .hidden {
@@ -28,7 +28,7 @@ body {
 .reveal-modal {
   padding: 75px 50px 50px 50px;
   background-color: #F2F2F2;
-  background-image: url('../patterns/debut-light.png');
+  background-image: url('../images/patterns/debut-light.png');
   border-radius: 10px;
   text-align: center;
   h3 {

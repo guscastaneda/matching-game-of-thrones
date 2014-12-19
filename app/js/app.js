@@ -2,7 +2,10 @@ var numberOfMoves = 0;
 var gameHasEnded = false;
 
 //source of shuffle cards: http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
+
 (function ($) {
+  /*jshint strict: true */
+  'use strict';
   $.fn.shuffle = function () {
     var currentIndex = this.length, temporaryValue, randomIndex;
     /*global jQuery, document*/
@@ -23,15 +26,17 @@ var gameHasEnded = false;
     return this;
   };
 }(jQuery));
-
+/*jshint strict: true */
 function isAMatch(card1, card2) {
+  'use strict';
   if (card1 === card2) {
     return true;
   }
   return false;
 }
-
+/*jshint strict: true */
 function newGame() {
+  'use strict';
   var card = $('.card').shuffle();
   card.removeClass('flipped');
   $('.card-front').removeClass('selected matched');
@@ -40,7 +45,9 @@ function newGame() {
 }
 newGame();
 
+/*jshint strict: true */
 function handleEndOfGame() {
+  'use strict';
   if (!gameHasEnded) {
     // Show number of plays and time on modal
     $('#game-over').foundation('reveal', 'open');
@@ -51,17 +58,20 @@ function handleEndOfGame() {
   }
 }
 
+/*jshint strict: true */
 function changeBackground() {
+  'use strict';
   $('#dark-background').on('click', function () {
-    $('body').css("background", "url('../patterns/denim.png')");
+    $('body').css('background', 'url(\'../images/patterns/denim.png\')');
   });
   $('#light-background').on('click', function () {
-    $('body').css("background", "url('../patterns/debut-light.png')");
+    $('body').css('background', 'url(\'../images/patterns/debut-light.png\')');
   });
 }
 changeBackground();
-
+/*jshint strict: true */
 function showName() {
+  'use strict';
   $('#display-name-on').on('click', function () {
     $('.character-info').removeClass('hidden');
   });
@@ -72,6 +82,7 @@ function showName() {
 showName();
 
 function spoilerFree() {
+  'use strict';
   $('#spoilers-on').on('click', function () {
     $('.dead').removeClass('hidden');
   });
@@ -82,6 +93,7 @@ function spoilerFree() {
 spoilerFree();
 
 function slideNavigation() {
+  'use strict';
   if ($('.nav-wrapper').hasClass('nav-expanded')) {
     $('#nav').removeClass('nav-expanded');
     return false;
@@ -94,6 +106,7 @@ $('#menu-button').on('click', slideNavigation);
 $('#reset').on('click', newGame);
 
 $(document).ready(function () {
+  'use strict';
   newGame();
   $('.card').on('click', function () {
     $(this).addClass('flipped');
