@@ -1083,16 +1083,16 @@ $include-html-global-classes: $include-html-classes;
 // 25. Reveal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-reveal-classes: $include-html-classes;
+$include-html-reveal-classes: $include-html-classes;
 
 // We use these to control the style of the reveal overlay.
-// $reveal-overlay-bg: rgba($black, .45);
+// $reveal-overlay-bg: rgba(black, .55);
 // $reveal-overlay-bg-old: $black;
 
 // We use these to control the style of the modal itself.
 // $reveal-modal-bg: $white;
 // $reveal-position-top: rem-calc(100);
-// $reveal-default-width: 80%;
+$reveal-default-width: 50%;
 // $reveal-max-width: $row-width;
 // $reveal-modal-padding: rem-calc(20);
 // $reveal-box-shadow: 0 0 10px rgba($black,.4);

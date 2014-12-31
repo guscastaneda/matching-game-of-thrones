@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-
+		
 		jade: {
 			compile: {
 				options: {
@@ -170,11 +170,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('compile-jade', ['jade']);
 	grunt.registerTask('compile-sass', ['sass']);
 	grunt.registerTask('bower-install', ['wiredep']);
-
+	
 	grunt.registerTask('default', ['compile-jade', 'compile-sass', 'bower-install', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-
+	
 	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 
 };

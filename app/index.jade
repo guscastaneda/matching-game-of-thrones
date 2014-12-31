@@ -5,12 +5,11 @@ html(class="no-js", lang="en")
         head
             div.logo
         include nav
+        div(id="game-over", class="reveal-modal", data-reveal)
+            a.close-reveal-modal &#215;
+            img(src="../images/joffrey-clapping-game-of-thrones.gif", alt="Joeffrey Clapping")
+            h3 You've matched all cards in <strong><span id="number-of-moves"></span></strong> moves.
         div#card-group
-
-            div(id="game-over", class="reveal-modal", data-reveal)
-                a.close-reveal-modal &#215;
-                img(class="th radius", src="../images/joffrey-clapping-game-of-thrones.gif", alt="Joeffrey Clapping")
-                h3 You've matched all cards in <strong><span id="number-of-moves"></span></strong> moves.
             div.card
                 div.card-back
                 div.card-front.kahl-drogo
