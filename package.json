@@ -1,16 +1,15 @@
 {
-  "name": "zf5_project",
-  "description": "",
+  "name": "matching-game-of-thrones",
+  "description": "Matching Game of Thrones is a memory card game inspired by HBO's original series Game of Thrones.",
   "version": "0.0.1",
-  "description": "",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Gus Castaneda",
+    "email": "cas.veira@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/guscastaneda/matching-game-of-thrones"
   },
   "devDependencies": {
     "load-grunt-tasks": "~1.0.0",
