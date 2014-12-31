@@ -13,6 +13,4 @@ This project is under current development. Your feedback will be very appreciate
 - Zurb Foundation 5
 - Scss (Sass) workflow
 - Jade templating
-- FontAwesome iconography
-
-[ ![Codeship Status for guscastaneda/matching-game-of-thrones](https://codeship.com/projects/7e0ba890-ef50-0131-8758-3ec175d8e376/status?branch=master)](https://codeship.com/projects/27007)
+- FontAwesome
