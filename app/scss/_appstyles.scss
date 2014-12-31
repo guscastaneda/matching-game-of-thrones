@@ -47,9 +47,3 @@ body {
     position: fixed;
     background-color: rgba($cinder,0.5);
 }
-.button {
-    background: $cardinal;
-    &:hover, &:active, &:focus {
-        background: lighten($cardinal, 10%);
-    }
-}
