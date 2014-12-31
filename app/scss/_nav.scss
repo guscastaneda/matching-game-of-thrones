@@ -1,14 +1,17 @@
+nav {
+    margin-top: 180px;
+}
 .nav-wrapper {
     background-color: #26292C;
     position: fixed;
-    padding-top: 180px;
     z-index: 5;
     left: 0;
     top: 0;
     bottom: 0;
     width: 80px;
     transition: all .125s ease-in-out;
-    fieldset {
+
+    fieldset, .blurb {
         visibility: hidden;
         opacity: 0;
         margin: 0;
@@ -46,10 +49,10 @@
                 border-top: 1px solid #3E4347;
             }
             &:hover, &:active, &:focus {
-                color: $cardinal;
+                color: $primary-color;
                 background-color: #212426;
                 i {
-                    color: $cardinal;
+                    color: $primary-color;
                     transform: scale(1.5);
                 }
             }
@@ -67,7 +70,7 @@
                 display: none;
             }
             input[type="radio"]:checked + label {
-                color: $cardinal;
+                color: $primary-color;
                 transition: all .3s ease-in-out;
             }
         }
@@ -87,14 +90,14 @@
     width: 20%; // 20% of window width
     min-width: 260px;
     transition: all .125s ease-in-out;
+
     ul li {
         padding: 18px 10px;
-        &:last-child {
-            // Close buttom icon
+        &:last-child { // Close buttom icon
             padding: 30px 10px;
         }
     }
-    fieldset {
+    fieldset, .blurb {
         visibility: visible;
         opacity: 1;
         transition: all .125s ease-in-out;
@@ -111,5 +114,11 @@
         transform: rotate(180deg);
         transition-delay: .2s;
         padding-top: 10px;
+    }
+    .blurb {
+        color: #666;
+        font: $font-stack;
+        font-size: .75em;
+        display: block;
     }
 }
