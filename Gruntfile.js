@@ -166,7 +166,14 @@ module.exports = function(grunt) {
 		}
 
 	});
-
+	grunt.initConfig({
+	  'gh-pages': {
+	    options: {
+	      base: 'dist'
+	    },
+	    src: ['**/*']
+	  }
+	});
 	grunt.registerTask('compile-jade', ['jade']);
 	grunt.registerTask('compile-sass', ['sass']);
 	grunt.registerTask('bower-install', ['wiredep']);
@@ -177,4 +184,5 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
 
+	grunt.loadNpmTasks('grunt-gh-pages');
 };
